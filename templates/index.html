@@ -17,6 +17,7 @@
                 <p class="card-text">{{ book.description }}</p>
                 <h6 class="card-subtitle mb-2 text-muted">{{ book.pages }} pages</h6>
                 <a class="text-light btn btn-primary" href="{% url 'update book' book.pk %}">Edit</a>
+                <a class="text-light btn btn-primary" href="{% url 'delete book' book.pk %}">Delete</a>
             </div>
         </div>
         {% endfor %}

@@ -9,8 +9,8 @@ class Book(models.Model):
         max_length=20,
     )
     pages = models.IntegerField(
-        default=0,
-        validators=[validate_pages]
+        validators=[MinValueValidator(1)],
+        default=1,
     )
 
     description = models.CharField(

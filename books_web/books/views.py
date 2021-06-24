@@ -54,3 +54,12 @@ def update_book(request, pk):
             form.save()
             return redirect('index')
         return show_update_form(request, form)
+
+
+def delete_book(request, pk):
+    book = Book.objects.get(pk=pk)
+    book.delete()
+    return redirect('index')
+
+
+
